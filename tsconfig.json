@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "target": "ES2020", 
+    "typeRoots": ["./node_modules/@types", "./src/types"],                     // Set target to modern JavaScript
+    "module": "CommonJS",                     // Use CommonJS module system for Node.js compatibility
+    "moduleResolution": "node",               // Resolve modules like Node.js
+    "outDir": "./dist",                       // Output directory for compiled files
+    "esModuleInterop": true,                  // Enable interoperability with CommonJS modules
+    "strict": true,                           // Enable strict type-checking
+    "skipLibCheck": true,                     // Skip type-checking of declaration files
+    "resolveJsonModule": true,                // Allow importing JSON files
+    "allowJs": true,                          // Allow JavaScript files in the project
+    "checkJs": false,                         // Do not type-check JavaScript files
+    "baseUrl": ".",                           // Base directory for non-relative imports
+    "paths": {
+      "@utils/*": ["src/utils/*"]             // Path aliases for TypeScript
+    },
+    "noEmit": true
+  },
+  "include": ["src/**/*","src/test/testSrc/**/*","src/types/**/*" ,"src/utils/**/*"  ],                    // Include all source files
+  "exclude": ["node_modules", "dist"]         // Exclude the output and dependencies
+}
+
