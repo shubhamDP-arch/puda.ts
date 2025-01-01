@@ -4,7 +4,7 @@
   "main": "src/NodeLink.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx ts-node-dev --watch --respawn src/test/server.ts"
+    "start": "npx ts-node-dev --watch --respawn --clear src/test/server.ts"
   },
   "keywords": [],
   "author": "",

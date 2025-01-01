@@ -2,22 +2,27 @@ import { IncomingMessage, ServerResponse } from 'http';
 import { readFiles } from '../utils/fileHandler';
 import { MiddlewareFunction } from '../../src/types/types';
 import Route from '../interfaces/route.interface';
-
+import GLOBAL from '../utils/globalMiddleWare'
 export interface RouteHandler extends Function {
   middleware?: MiddlewareFunction[];
 }
 
 export class RouteLoader {
   static load(directory: string): Route[] {
+    console.clear();
     const routes: Route[] = [];
     const files = readFiles(directory); 
+    const global = require("../utils/globalMiddleWare").default
+
+    const globalMiddlewares = this.extractMiddleware(global)
     files.forEach(file => {
         file
       const routeModule = require(file).default; 
 
+
       if (typeof routeModule === 'function') {
         const method = this.getMethodFromFunctionName(routeModule);
-
+       
         const relativePath = file
           .replace(directory, '')
           .replace(/\\/g, '/') 
@@ -25,18 +30,21 @@ export class RouteLoader {
           .replace('/index', '/');
 
         const path = relativePath;
+
+        const routeMiddlewares = this.extractMiddleware(routeModule);
         
-        const middlewares = this.extractMiddleware(routeModule);
-
-        const handler = this.wrapWithMiddleware(routeModule, middlewares);
-
+        const combinedMiddlewares = [...globalMiddlewares, ...routeMiddlewares];
+        const handler = this.wrapWithMiddleware(routeModule, combinedMiddlewares);
+        
+        
         routes.push({
           path,
           method,
-          callback: handler, 
+          callback: handler,
         });
       }
     });
+    routes.push
 
     return routes;
   }

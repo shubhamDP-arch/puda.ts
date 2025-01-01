@@ -4,4 +4,5 @@ export default interface Route {
   method: string;
   callback: Function;
   
+  
 }
