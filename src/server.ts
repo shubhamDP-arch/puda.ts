@@ -21,7 +21,7 @@ export class Server {
       const { route, params, query } = match;
       route.callback(req, res, params, query);
     } else {
-      res.end('Not Found');
+      res.end('Not Found Route');
     }
   }
 
