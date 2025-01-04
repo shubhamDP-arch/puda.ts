@@ -26,7 +26,7 @@
 </pre>
 
 <p>Example usage:</p>
-<pre>
+
 
 ```ts
 import { Server, initializeRouter } from "puda.ts";
@@ -37,7 +37,7 @@ const server = new Server(router);
 
 server.start(PORTNUMBER, () => console.log("Server running at http://localhost:PORTNUMBER"));
 ```
-</pre>
+
 
 <p>
   PUDA.TS uses a file-based API router where each file in your directory is automatically mapped to a route. There’s no need to manually define routes in a configuration file.
@@ -53,11 +53,11 @@ server.start(PORTNUMBER, () => console.log("Server running at http://localhost:P
 <p>Add the following script to your <code>package.json</code>:</p>
 
 ```json
-<code>
+
 "scripts": {
   "start": "npm link puda.ts && npx ts-node-dev --watch --respawn --clear route.ts"
 }
-</code>
+
 ```
 
 <p>
