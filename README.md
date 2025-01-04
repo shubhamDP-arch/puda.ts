@@ -1,13 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/themes/prism-tomorrow.css" rel="stylesheet" />
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/prism.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-javascript.min.js"></script>
-</head>
-<body>
+
 
 <h1 align="center"><b>PUDA.TS</b></h1>
 
@@ -36,7 +27,8 @@
 
 <p>Example usage:</p>
 <pre>
-<code code="class="language-js"">
+
+```ts
 import { Server, initializeRouter } from "puda.ts";
 
 const router = initializeRouter("./&lt;name of your folder for routes&gt;");
@@ -44,7 +36,7 @@ const router = initializeRouter("./&lt;name of your folder for routes&gt;");
 const server = new Server(router);
 
 server.start(PORTNUMBER, () => console.log("Server running at http://localhost:PORTNUMBER"));
-</code>
+```
 </pre>
 
 <p>
@@ -60,13 +52,13 @@ server.start(PORTNUMBER, () => console.log("Server running at http://localhost:P
 <h3>Setup</h3>
 <p>Add the following script to your <code>package.json</code>:</p>
 
-<pre>
+```json
 <code>
 "scripts": {
   "start": "npm link puda.ts && npx ts-node-dev --watch --respawn --clear route.ts"
 }
 </code>
-</pre>
+```
 
 <p>
   Once added, simply run the script to start the server, and you're good to go!
@@ -74,16 +66,13 @@ server.start(PORTNUMBER, () => console.log("Server running at http://localhost:P
 
 <h2>Basic HTTP Response in PUDA.TS</h2>
 
-<pre>
-<code>
+
+```ts
 import { Request, Response } from 'puda.ts'; 
 
 export default function GET(req: Request, res: Response): void {
     res.send(200, "hello mom");
 }
-</code>
-</pre>
+```
 
-</body>
-</html>
 
