@@ -1,5 +1,4 @@
-****PUDA.TS****
-
+<h1 align="center"><b>PUDA.TS</b></h1>
 **MY PERSONAL PROJECT DONT USE IT FOR YOUR NEXT MILLION DOLLAR PROJECT**
 
 **Overview**
