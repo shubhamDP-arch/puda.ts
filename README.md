@@ -9,13 +9,15 @@
 
 PUDA is an backend library which provides basic tools to create apis. Its Fast, unopinionated, minimalist library for Node.js.
 
-Features:
+<h2>Features</h2>
+<ul>
+  <li>🚀 <strong>Feature 1</strong> – Consists of a file-based router</li>
+  <li>🔌 <strong>Feature 2</strong> – Middleware support</li>
+  <li>📦 <strong>Feature 3</strong> – Built-in body parser</li>
+  <li>🔒 <strong>Feature 4</strong> – Has built-in type safety</li>
+  <li>😄 <strong>Feature 5</strong> – Easy to use and user-friendly</li>
+</ul>
 
-    Feature 1 – Consists of a file based router
-    Feature 2 – Middleware Support
-    Feature 3 – Built in Body parser
-    Feature 4 - has built in type safety
-    Feature 5 - easy to use and userfriendly
 
 
 To install PUDA.TS, run the following:
