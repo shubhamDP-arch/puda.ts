@@ -1,6 +1,6 @@
 PUDA.TS
 
-######MY PERSONAL PROJECT DONT USE IT FOR YOUR NEXT MILLION DOLLAR PROJECT #################################
+######MY PERSONAL PROJECT DONT USE IT FOR YOUR NEXT MILLION DOLLAR PROJECT ###################
 
 Overview
 
@@ -14,6 +14,7 @@ Features:
     Feature 4 - has built in type safety
     Feature 5 - easy to use and userfriendly
 
+
 To install PUDA.TS, run the following:
 
 
@@ -24,8 +25,11 @@ npm install pudda.ts
 
 ```ts
 import { Server, initializeRouter } from "puda.ts";
+
 const router = initializeRouter("./<name of your folder for routes>");
+
 const server = new Server(router);
+
 server.start(PORTNUMBER, () => console.log("Server running at http://localhost:PORTNUMBER"));
 ```
 
@@ -49,13 +53,8 @@ basic http response in puda.ts
 import { Request, Response} from 'puda.ts'; 
 
 export default function GET(req: Request, res: Response): void {
+
     res.send(200, "hello mom")
+
 }
 ```
-
-
-
-
-
-
-   
