@@ -1,6 +1,6 @@
 PUDA.TS
 
-###########MY PERSONAL PROJECT DONT USE IT FOR YOUR NEXT MILLION DOLLAR PROJECT ####################################
+######MY PERSONAL PROJECT DONT USE IT FOR YOUR NEXT MILLION DOLLAR PROJECT #################################
 
 Overview
 
@@ -16,26 +16,24 @@ Features:
 
 To install PUDA.TS, run the following:
 
+
 ```bash
 npm install pudda.ts
-
 ```
+
+
 ```ts
 import { Server, initializeRouter } from "puda.ts";
-
-
 const router = initializeRouter("./<name of your folder for routes>");
-
 const server = new Server(router);
-
 server.start(PORTNUMBER, () => console.log("Server running at http://localhost:PORTNUMBER"));
-
-
 ```
+
 
 It uses a file based api router where each file in your page is a route  no need to manually define routes in a configuration file.
 
 make sure you have typescript and node.js installed also install ts-node is installed
+
 
 ```json
   "start": "npm link puda.ts && npx ts-node-dev --watch --respawn --clear route.ts" 
@@ -44,6 +42,7 @@ make sure you have typescript and node.js installed also install ts-node is inst
 add this to your scripts file and then you are good to go 
 
 basic http response in puda.ts
+
 
 ```ts
   
