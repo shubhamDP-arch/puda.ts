@@ -2,7 +2,7 @@ import { IncomingMessage, ServerResponse } from 'http';
 import { readFiles } from '../utils/fileHandler';
 import { MiddlewareFunction } from '../../src/types/types';
 import Route from '../interfaces/route.interface';
-import GLOBAL from '../utils/globalMiddleWare'
+
 export interface RouteHandler extends Function {
   middleware?: MiddlewareFunction[];
 }

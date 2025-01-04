@@ -50,9 +50,9 @@ ServerResponse.prototype.sendFile = function(
   }
 
   const callerDir = path.dirname(callerFilePath);
-  console.log(callerDir)
+
   const absolutePath = path.join(callerDir, filePath);
-  console.log(absolutePath)
+
   if(!fs.existsSync(absolutePath)){
     this.send(400, "File does not exists");
     return;
