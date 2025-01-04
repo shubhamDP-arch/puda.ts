@@ -19,6 +19,7 @@ PUDA is an backend library which provides basic tools to create apis. Its Fast, 
 </ul>
 
 
+<h2>Installation</h2>
 
 To install PUDA.TS, run the following:
 
