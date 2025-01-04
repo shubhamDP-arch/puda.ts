@@ -4,6 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>PUDA.TS - README</title>
+    <link href="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/themes/prism-tomorrow.css" rel="stylesheet" />
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/prism.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/prismjs@1.27.0/components/prism-javascript.min.js"></script>
 </head>
 <body>
 
@@ -34,7 +37,7 @@
 
 <p>Example usage:</p>
 <pre>
-<code>
+<code code="class="language-js"">
 import { Server, initializeRouter } from "puda.ts";
 
 const router = initializeRouter("./&lt;name of your folder for routes&gt;");
