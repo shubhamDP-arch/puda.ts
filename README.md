@@ -1,13 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PUDA.TS - README</title>
+</head>
+<body>
+
 <h1 align="center"><b>PUDA.TS</b></h1>
-
-
 
 <h1>🚨 <b>MY PERSONAL PROJECT, DON’T USE IT FOR YOUR NEXT MILLION-DOLLAR PROJECT</b> 🚨</h1>
 
-
-**Overview**
-
-PUDA is an backend library which provides basic tools to create apis. Its Fast, unopinionated, minimalist library for Node.js.
+<h2>Overview</h2>
+<p>
+  PUDA is a backend library that provides basic tools to create APIs. It’s a fast, unopinionated, and minimalist library for Node.js.
+</p>
 
 <h2>Features</h2>
 <ul>
@@ -18,49 +25,63 @@ PUDA is an backend library which provides basic tools to create apis. Its Fast, 
   <li>😄 <strong>Feature 5</strong> – Easy to use and user-friendly</li>
 </ul>
 
-
 <h2>Installation</h2>
+<p>To install PUDA.TS, run the following:</p>
 
-To install PUDA.TS, run the following:
+<pre>
+<code>npm install puda.ts</code>
+</pre>
 
-
-```bash
-npm install pudda.ts
-```
-
-
-```ts
+<p>Example usage:</p>
+<pre>
+<code>
 import { Server, initializeRouter } from "puda.ts";
 
-const router = initializeRouter("./<name of your folder for routes>");
+const router = initializeRouter("./&lt;name of your folder for routes&gt;");
 
 const server = new Server(router);
 
 server.start(PORTNUMBER, () => console.log("Server running at http://localhost:PORTNUMBER"));
-```
+</code>
+</pre>
 
+<p>
+  PUDA.TS uses a file-based API router where each file in your directory is automatically mapped to a route. There’s no need to manually define routes in a configuration file.
+</p>
 
-It uses a file based api router where each file in your page is a route  no need to manually define routes in a configuration file.
+<h3>Prerequisites</h3>
+<ul>
+  <li>Make sure you have <strong>TypeScript</strong> and <strong>Node.js</strong> installed.</li>
+  <li>Also ensure <strong>ts-node</strong> is installed globally.</li>
+</ul>
 
-make sure you have typescript and node.js installed also install ts-node is installed
+<h3>Setup</h3>
+<p>Add the following script to your <code>package.json</code>:</p>
 
+<pre>
+<code>
+"scripts": {
+  "start": "npm link puda.ts && npx ts-node-dev --watch --respawn --clear route.ts"
+}
+</code>
+</pre>
 
-```json
-  "start": "npm link puda.ts && npx ts-node-dev --watch --respawn --clear route.ts" 
-```
+<p>
+  Once added, simply run the script to start the server, and you're good to go!
+</p>
 
-add this to your scripts file and then you are good to go 
+<h2>Basic HTTP Response in PUDA.TS</h2>
 
-basic http response in puda.ts
-
-
-```ts
-  
-import { Request, Response} from 'puda.ts'; 
+<pre>
+<code>
+import { Request, Response } from 'puda.ts'; 
 
 export default function GET(req: Request, res: Response): void {
-
-    res.send(200, "hello mom")
-
+    res.send(200, "hello mom");
 }
-```
+</code>
+</pre>
+
+</body>
+</html>
+
