@@ -1,13 +1,14 @@
 {
   "name": "puda.ts",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "main": "src/NodeLink.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npx ts-node-dev --watch --respawn --clear src/test/server.ts"
   },
-  "keywords": [],
-  "author": "",
+
+  "keywords": ["backend", "pudda", "framework", "node.js", "api", "pudda.ts", "typescript"],
+  "author": "Shubham Prabhu shubhamprabhu21@gmail.com",
   "license": "ISC",
   "description": "",
   "repository": {
